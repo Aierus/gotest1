@@ -42,4 +42,4 @@ The Big-O notation for Sort and Stable from the go documentation seems to be acc
 
 Sorting using sort.Sort() results in a longer time the larger the slices get, approximately doubling every time x grows an order of magnitude, concurring with the assumption that sort.Sort is O(log(n)) for slices. For arrays, sort.Sort() actually sorts faster when the arrays are larger (this may be a bug). 
 
-Sorting using sort.Stable() results in a slower rate of growth when sorting an array, staying the nearly same when inputs grow by an order of magnitude. When sorting slices, sort.Stable quadruples when inputs grow by an order of magnitude. These inputs align with the expected O(n*n*log(n)*n*log(n)*log(n)) == O(3n * 3log(n))
+Sorting using sort.Stable() results in a slower rate of growth when sorting an array, staying the nearly same when inputs grow by an order of magnitude. When sorting slices, sort.Stable quadruples when inputs grow by an order of magnitude. These inputs align with the expected O(n*\n*\log(n)*\n*\log(n)*log(n)) == O(3n * 3log(n))
