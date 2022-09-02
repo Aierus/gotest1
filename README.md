@@ -12,6 +12,7 @@ Instructions to run
     - `go run corrections/corrections.go {x}` where x is the integer input for the length of arrays, slices, and maps
 
 Expected outcome
+
     - `Input from cmd line is 100`
 
     - `Initializing an array of len 1000 took 84ns miliseconds`
