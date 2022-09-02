@@ -1,0 +1,10 @@
+Input from cmd line is 1000
+Initializing an array of len 1000 took 83ns miliseconds
+Initializing an slice of len 1000 took 666ns miliseconds
+Initializing an map of len 0 took 83ns miliseconds
+incrementing an array by 1 took 84 miliseconds
+incrementing a slice by 1 took 83 miliseconds
+sorting a slice using sort.Sort took 68833 miliseconds
+sorting a slice using sort.Stable took 3875 miliseconds
+sorting an array using sort.Sort took 39500 miliseconds
+sorting an array using sort.Stable took 30208 miliseconds
