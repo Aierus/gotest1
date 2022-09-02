@@ -8,10 +8,14 @@ Regardless, for question 3, the O(x) for sort.Sort is O(n*log(n)), and the O(x) 
 
 <b>CORRECTIONS BELOW</b>
 
-Instructions to run
-    - `go run corrections/corrections.go {x}` where x is the integer input for the length of arrays, slices, and maps
+<b>Instructions to run</b>
 
-Expected outcome
+    - `go run corrections/corrections.go {x}` 
+
+where x is the integer input for the length of arrays, slices, and maps
+
+
+<b>Expected outcome</b>
 
     - `Input from cmd line is 100`
 
