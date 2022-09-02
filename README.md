@@ -13,14 +13,23 @@ Instructions to run
 
 Expected outcome
     - `Input from cmd line is 100`
+
     - `Initializing an array of len 1000 took 84ns miliseconds`
+
     - `Initializing an slice of len 100 took 708ns miliseconds`
+
     - `Initializing an map of len 0 took 84ns miliseconds`
+
     - `incrementing an array by 1 took 42 miliseconds`
+
     - `incrementing a slice by 1 took 42 miliseconds`
+
     - `sorting a slice using sort.Sort took 5042 miliseconds`
+
     - `sorting a slice using sort.Stable took 875 miliseconds`
+
     - `sorting an array using sort.Sort took 25875 miliseconds`
+
     - `sorting an array using sort.Stable took 30250 miliseconds`
 
 
