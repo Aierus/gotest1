@@ -8,34 +8,33 @@ Regardless, for question 3, the O(x) for sort.Sort is O(n*log(n)), and the O(x) 
 
 <b>CORRECTIONS BELOW</b>
 
+Additional corrections have been made. The corrections directory has been deleted, and GoQuiz1.go is now the most current version.
+
 <b>Instructions to run</b>
 
-    - `go run corrections/corrections.go {x}` 
+    - `go run GoQuiz1.go {x}` 
 
 where x is the integer input for the length of arrays, slices, and maps
 
 
 <b>Expected outcome</b>
 
-    - `Input from cmd line is 100`
-
-    - `Initializing an array of len 1000 took 84ns miliseconds`
-
-    - `Initializing an slice of len 100 took 708ns miliseconds`
-
-    - `Initializing an map of len 0 took 84ns miliseconds`
-
-    - `incrementing an array by 1 took 42 miliseconds`
-
-    - `incrementing a slice by 1 took 42 miliseconds`
-
-    - `sorting a slice using sort.Sort took 5042 miliseconds`
-
-    - `sorting a slice using sort.Stable took 875 miliseconds`
-
-    - `sorting an array using sort.Sort took 25875 miliseconds`
-
-    - `sorting an array using sort.Stable took 30250 miliseconds`
+    - `Input from cmd line is 1000`
+    - `Initializing an array of len 1000 took 83ns`
+    - `Initializing an array of len 100 took 41ns`
+    - `Initializing an array of len 10 took 42ns`
+    - `Initializing an slice of len 1000 took 708ns`
+    - `Initializing an map of len 0 took 83ns`
+    - `The map is dynamic, and thus has not been assigned a length yet`
+    - `incrementing an array by 1 took 42ns`
+    - `incrementing a slice by 1 took 42ns`
+    - `incrementing a map by 1 took 83ns`
+    - `sorting a slice of length 1000 using sort.Sort took 66459ns`
+    - `sorting a slice using sort.Stable took 4292ns`
+    - `sorting an array of length 1000 using sort.Sort took 65667ns`
+    - `sorting an array of length 1000 using sort.Stable took 3750ns`
+    - `sorting an array of length 100 using sort.Sort took 4458ns`
+    - `sorting an array of length 100 using sort.Stable took 583ns`
 
 
 The Big-O notation for Sort and Stable from the go documentation seems to be accurate. 

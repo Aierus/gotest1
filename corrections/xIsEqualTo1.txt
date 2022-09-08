@@ -1,8 +1,0 @@
-Input from cmd line is 1
-Initializing an array of len 1000 took 83ns miliseconds
-Initializing an slice of len 1 took 125ns miliseconds
-Initializing an map of len 0 took 83ns miliseconds
-sorting a slice using sort.Sort took 209 miliseconds
-sorting a slice using sort.Stable took 209 miliseconds
-sorting an array using sort.Sort took 51834 miliseconds
-sorting an array using sort.Stable took 27916 miliseconds
