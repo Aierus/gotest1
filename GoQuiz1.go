@@ -13,6 +13,8 @@ import (
 
 func Problem1(x int) {
 	// Time duration code taken from https://pkg.go.dev/time#Duration
+
+	// Initialize arrays of different sizes
 	t0 := time.Now()
 	exampleArray := [1000]int{}
 	t1 := time.Now()
@@ -28,17 +30,20 @@ func Problem1(x int) {
 	t1 = time.Now()
 	fmt.Printf("Initializing an array of len %d took %v\n", len(exampleArray10), t1.Sub(t0))
 
+	// Initialize slice
 	t0 = time.Now()
 	exampleSlice := make([]int, x)
 	t1 = time.Now()
 	fmt.Printf("Initializing an slice of len %d took %v\n", len(exampleSlice), t1.Sub(t0))
 
+	// Initialize Map
 	t0 = time.Now()
 	exampleMap := make(map[int]int)
 	t1 = time.Now()
 	fmt.Printf("Initializing an map of len %d took %v\n", len(exampleMap), t1.Sub(t0))
 	fmt.Printf("The map is dynamic, and thus has not been assigned a length yet\n")
 
+	// Increment array
 	for i := 0; i < 1000; i++ {
 		if i == 1 {
 			t0 := time.Now()
@@ -51,6 +56,7 @@ func Problem1(x int) {
 	// fmt.Printf("Example array of length 100 after assignment == ")
 	// fmt.Println(exampleArray100)
 
+	// Increment slice
 	for i, _ := range exampleSlice {
 		if i == 1 {
 			t0 := time.Now()
@@ -62,6 +68,8 @@ func Problem1(x int) {
 	}
 	// fmt.Printf("Example slice of length %d after assignment == ", len(exampleSlice))
 	// fmt.Println(exampleSlice)
+
+	// Increment map
 	for i := 0; i < x; i++ {
 		v := i
 		if i == 1 {
@@ -76,6 +84,7 @@ func Problem1(x int) {
 	// fmt.Println(exampleMap)
 }
 
+// Add interface for slices, convert arrays to slices when using interface
 type Interface []int
 
 func (a Interface) Len() int           { return len(a) }
@@ -83,6 +92,7 @@ func (a Interface) Less(i, j int) bool { return a[i] < a[j] }
 func (a Interface) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 
 func Problem2(x int) {
+	// Declare Slice of len x and two arrays, one of len 1000 and one of len 100 to compare sort.Sort() and sort.Stable() on arrays of different sizes
 	exSlice := make([]int, x)
 	exArray1000 := [1000]int{}
 	exArray100 := [100]int{}
@@ -99,6 +109,7 @@ func Problem2(x int) {
 		exArray100[i] = rand.Int()
 	}
 
+	// Testing time it takes for sorting slices and arrays of different sizes
 	t0 := time.Now()
 	sort.Sort(Interface(exSlice))
 	t1 := time.Now()
@@ -120,7 +131,7 @@ func Problem2(x int) {
 	fmt.Printf("sorting an array of length %d using sort.Stable took %dns\n", len(exArray1000), t1.Sub(t0))
 
 	t0 = time.Now()
-	sort.Sort(Interface(exArray100[:])) // Convert array to slice using [:]
+	sort.Sort(Interface(exArray100[:]))
 	t1 = time.Now()
 	fmt.Printf("sorting an array of length %d using sort.Sort took %dns\n", len(exArray100), t1.Sub(t0))
 
